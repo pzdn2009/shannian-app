@@ -1,0 +1,19 @@
+{
+  "name": "大佛頂首楞嚴神咒 · 助背手册",
+  "short_name": "楞嚴咒助背",
+  "description": "《大佛頂首楞嚴神咒》助背手册 V2 网页版：祈請、五會、回向，支持遮罩背誦與逐頁進度。",
+  "lang": "zh-Hant",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f2e8",
+  "theme_color": "#b65308",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

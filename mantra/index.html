@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>大佛頂首楞嚴神咒 · 助背手冊 V2</title>
+    <meta
+      name="description"
+      content="《大佛頂首楞嚴神咒》助背手冊 V2 的网页版：祈請、五會全文、回向，支持遮罩背诵、逐頁进度與夜間閱讀。"
+    />
+    <meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="assets/base.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark">楞嚴咒助背</span>
+          <span class="brand-sub">SUTRA MEMORY</span>
+        </a>
+        <span class="spacer"></span>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="切换外观">
+            <svg data-icon="auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8.5" />
+              <path d="M12 3.5v17" />
+              <path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor" stroke="none" opacity=".35" />
+            </svg>
+            <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" hidden>
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6" />
+            </svg>
+            <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" hidden>
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">《大佛頂首楞嚴神咒》助背手冊 · V2</p>
+          <h1>大佛頂首楞嚴神咒<small>五會全本 · 助背</small></h1>
+          <p class="hero-lead">
+            依 2022 年新加坡版助背手冊整理：祈請、五會、回向，共三十五頁。
+            網頁版保留原有的左右分欄與分頁節奏，加上遮罩背誦、逐頁進度與離線可用。
+          </p>
+          <ul class="hero-meta">
+            <li>祈請 3 頁</li>
+            <li>五會 31 頁</li>
+            <li>回向 1 頁</li>
+            <li>約 25–30 分鐘一遍</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn" id="start-btn" href="read.html#/qijing/1">開始背誦</a>
+            <a class="btn ghost" id="continue-btn" href="read.html#/qijing/1" hidden>繼續上次</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.1">
+            <g opacity=".9">
+              <circle cx="200" cy="200" r="168" stroke-dasharray="2 7" />
+              <circle cx="200" cy="200" r="138" />
+              <circle cx="200" cy="200" r="112" stroke-dasharray="1 5" />
+              <circle cx="200" cy="200" r="62" />
+            </g>
+            <g opacity=".55">
+              <path d="M200 32v22M200 346v22M32 200h22M346 200h22" />
+              <path d="M86 86l16 16M298 298l16 16M314 86l-16 16M102 298l-16 16" />
+            </g>
+            <g opacity=".75">
+              <path d="M200 88c22 26 34 60 34 112s-12 86-34 112c-22-26-34-60-34-112S178 114 200 88z" />
+              <path d="M200 88c22 26 34 60 34 112s-12 86-34 112c-22-26-34-60-34-112S178 114 200 88z" transform="rotate(60 200 200)" />
+              <path d="M200 88c22 26 34 60 34 112s-12 86-34 112c-22-26-34-60-34-112S178 114 200 88z" transform="rotate(120 200 200)" />
+            </g>
+            <circle cx="200" cy="200" r="9" fill="currentColor" stroke="none" opacity=".85" />
+            <circle cx="200" cy="200" r="20" stroke-dasharray="3 4" opacity=".6" />
+          </svg>
+          <span class="seal">SINGAPORE · 2022</span>
+        </div>
+      </section>
+
+      <section class="section-block" id="structure">
+        <div class="block-head">
+          <div>
+            <h2>結構總覽</h2>
+            <p id="progress-line">依手冊原分頁，點擊任一會即可進入</p>
+          </div>
+          <button class="btn ghost small" type="button" id="reset-progress">清除進度</button>
+        </div>
+        <div class="structure-grid" id="structure-grid"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="block-head">
+          <div>
+            <h2>怎麼用</h2>
+            <p>三個動作，對應手冊的三種用法</p>
+          </div>
+        </div>
+        <div class="how">
+          <div class="how-card">
+            <b><em>一</em>先通讀</b>
+            <span>關掉背誦模式，按手冊原分頁順序讀一遍，熟悉每一頁的起句與收句。</span>
+          </div>
+          <div class="how-card">
+            <b><em>二</em>遮罩自測</b>
+            <span>開啟背誦模式，整頁文字隱去；想起一句就點開一句，卡住的地方記下來。</span>
+          </div>
+          <div class="how-card">
+            <b><em>三</em>標記進度</b>
+            <span>整頁能背就按「已背」，首頁會顯示五會的完成度。進度只存在這台裝置的瀏覽器裡。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="appendix">
+        <div class="block-head">
+          <div>
+            <h2>附錄</h2>
+            <p>手冊末頁保留的外部參考</p>
+          </div>
+        </div>
+        <div class="appendix">
+          <a href="https://m.sohu.com/n/463960515/" target="_blank" rel="noopener noreferrer">
+            <span>《楞严咒》彩色背诵表格</span><span>m.sohu.com ↗</span>
+          </a>
+          <a href="http://big5.xuefo.net/nr/article30/304621.html" target="_blank" rel="noopener noreferrer">
+            <span>楞嚴咒大意及作用</span><span>xuefo.net ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="site-foot">
+        <span>底本：《大佛頂首楞嚴神咒》助背手冊 V2（2022, In Singapore）。文字依手冊錄入，個別明顯錯字已校。</span>
+        <span>進度與設定僅保存在本機瀏覽器 · 可離線使用</span>
+      </footer>
+    </main>
+
+    <script src="assets/handbook.js"></script>
+    <script src="assets/core.js"></script>
+    <script src="assets/home.js"></script>
+    <script>
+      if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      }
+    </script>
+  </body>
+</html>

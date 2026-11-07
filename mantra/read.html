@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>閱讀 · 大佛頂首楞嚴神咒助背</title>
+    <meta name="description" content="《大佛頂首楞嚴神咒》助背手册 V2 网页版，支持遮罩背诵与逐頁进度。" />
+    <meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="assets/base.css" />
+  </head>
+  <body>
+    <div class="reader-progress"><i id="progress-bar"></i></div>
+
+    <header class="topbar reader-top">
+      <div class="topbar-inner">
+        <a class="crumb" href="./">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 5l-7 7 7 7" />
+          </svg>
+          目錄
+        </a>
+        <nav class="chapter-tabs" id="tabs" aria-label="章節"></nav>
+        <span class="spacer"></span>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" id="size-down" aria-label="縮小字號" title="縮小字號">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M5 12h14" />
+            </svg>
+          </button>
+          <button class="icon-btn" type="button" id="size-up" aria-label="放大字號" title="放大字號">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="切换外观">
+            <svg data-icon="auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8.5" />
+              <path d="M12 3.5v17" />
+              <path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor" stroke="none" opacity=".35" />
+            </svg>
+            <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" hidden>
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6" />
+            </svg>
+            <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" hidden>
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="reader-main" id="main" style="--text-size: 20px"></main>
+
+    <div class="dock" id="dock">
+      <button type="button" id="prev-btn" aria-label="上一頁">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.5 5.5L8 12l6.5 6.5" />
+        </svg>
+      </button>
+      <span class="divider"></span>
+      <button type="button" id="mask-btn" aria-pressed="true" title="背誦模式（M）">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.5 12s3.6-6.5 9.5-6.5S21.5 12 21.5 12s-3.6 6.5-9.5 6.5S2.5 12 2.5 12z" />
+          <circle cx="12" cy="12" r="2.6" />
+        </svg>
+        <span class="label">背誦</span>
+      </button>
+      <button type="button" id="reveal-btn" title="顯示本頁全部">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 5.5c2.4 1.9 5 2.8 8 2.8s5.6-.9 8-2.8" />
+          <path d="M4 11c2.4 1.9 5 2.8 8 2.8s5.6-.9 8-2.8" />
+          <path d="M4 16.5c2.4 1.9 5 2.8 8 2.8s5.6-.9 8-2.8" />
+        </svg>
+      </button>
+      <button type="button" id="done-btn" aria-pressed="false" title="標記這一頁已背">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12.5l4.2 4.2L19 7" />
+        </svg>
+        <span class="label">已背</span>
+      </button>
+      <span class="divider"></span>
+      <button type="button" id="next-btn" class="primary" aria-label="下一頁">
+        <span class="label">下一頁</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.5 5.5L16 12l-6.5 6.5" />
+        </svg>
+      </button>
+    </div>
+
+    <script src="assets/handbook.js"></script>
+    <script src="assets/core.js"></script>
+    <script src="assets/reader.js"></script>
+    <script>
+      if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      }
+    </script>
+  </body>
+</html>
