@@ -1,6 +1,6 @@
 /* 离线缓存：手冊內容不大，整站預緩存，寺院裡沒網也能用。 */
 
-const VERSION = "shurangama-v2";
+const VERSION = "shurangama-v3";
 const ASSETS = [
   "./",
   "index.html",

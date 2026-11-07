@@ -135,8 +135,7 @@
     const body = cols
       .map(({ name, lines }) => {
         const html = lines.map((line, i) => lineHtml(line, name, i)).join("");
-        const plain = lines.every((line) => !line.m);
-        return `<div class="text-col" data-col="${name}"${plain ? ' data-plain="true"' : ""}>${html}</div>`;
+        return `<div class="text-col" data-col="${name}">${html}</div>`;
       })
       .join("");
 
@@ -213,8 +212,7 @@
     const attrs = isMasked
       ? ' tabindex="0" role="button" aria-label="顯示這一句"'
       : "";
-    const mark = line.m ? `<span class="mark">${escapeHtml(line.m)}</span>` : '<span class="mark"></span>';
-    return `<p class="line${isMasked ? " masked" : ""}" data-key="${key}" data-lv="${line.lv || 0}"${attrs}>${mark}<span class="txt">${text}</span></p>`;
+    return `<p class="line${isMasked ? " masked" : ""}" data-key="${key}"${attrs}><span class="txt">${text}</span></p>`;
   }
 
   function escapeHtml(text) {

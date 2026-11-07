@@ -588,12 +588,6 @@ button {
   margin-right: 6px;
 }
 
-.how-card .sym {
-  font-style: normal;
-  color: var(--accent);
-  font-size: 0.9em;
-}
-
 /* 附錄 + 页脚 */
 
 .appendix {
@@ -788,9 +782,7 @@ footer.site-foot {
 }
 
 .line {
-  display: grid;
-  grid-template-columns: 2.4em minmax(0, 1fr);
-  column-gap: 0.55em;
+  display: block;
   margin: 0;
   padding: 6px 10px 6px 8px;
   border-radius: 10px;
@@ -805,45 +797,13 @@ footer.site-foot {
   text-wrap: pretty;
 }
 
-.line .mark {
-  font-family: var(--sans);
-  font-size: 0.6em;
-  line-height: 3.25;
-  color: var(--muted);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  user-select: none;
-}
-
 .line .txt {
   min-width: 0;
-}
-
-.text-col[data-plain="true"] .line {
-  grid-template-columns: minmax(0, 1fr);
-  padding-left: 0;
-}
-
-.text-col[data-plain="true"] .line .mark {
-  display: none;
-}
-
-/* 手册用编号和项目符号标出同一组重复句，缩进即层级 */
-.line[data-lv="1"] {
-  margin-left: 1.5em;
-}
-
-.line[data-lv="2"] {
-  margin-left: 3em;
 }
 
 .line.blank {
   height: 0.8em;
   padding: 0;
-}
-
-.line.blank .mark {
-  display: none;
 }
 
 .line.blank .txt {
@@ -879,7 +839,7 @@ footer.site-foot {
 
 .line.masked .txt {
   position: relative;
-  justify-self: start;
+  display: inline-block;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
