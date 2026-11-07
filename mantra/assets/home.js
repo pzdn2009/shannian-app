@@ -20,7 +20,9 @@
   function excerpt(section) {
     const page = section.pages[0];
     if (!page) return "";
-    const lines = [...page.left, ...page.right].filter((line) => line.trim());
+    const lines = [...page.left, ...page.right]
+      .map((line) => line.t || "")
+      .filter(Boolean);
     return lines.slice(0, 2).join(" ").replace(/\s+/g, " ").slice(0, 40);
   }
 

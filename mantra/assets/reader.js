@@ -128,21 +128,15 @@
       { name: "right", lines: page.right },
     ];
 
-    const longText = [...page.left, ...page.right].some((l) => l.length > 34);
+    const longText = [...page.left, ...page.right].some(
+      (line) => (line.t || "").length > 34
+    );
 
     const body = cols
       .map(({ name, lines }) => {
-        const html = lines
-          .map((line, i) => {
-            if (!line.trim()) return `<p class="line blank" aria-hidden="true"></p>`;
-            const k = `${name}-${i}`;
-            const isMasked = masked && !revealed.has(k);
-            return `<p class="line${isMasked ? " masked" : ""}" data-key="${name}-${i}"${
-              isMasked ? ' tabindex="0" role="button" aria-label="顯示這一句"' : ""
-            }>${escapeHtml(line)}</p>`;
-          })
-          .join("");
-        return `<div class="text-col" data-col="${name}">${html}</div>`;
+        const html = lines.map((line, i) => lineHtml(line, name, i)).join("");
+        const plain = lines.every((line) => !line.m);
+        return `<div class="text-col" data-col="${name}"${plain ? ' data-plain="true"' : ""}>${html}</div>`;
       })
       .join("");
 
@@ -203,6 +197,24 @@
     HB.store.remember(section.id, page.no);
 
     window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
+  function lineHtml(line, col, i) {
+    if (!line || !line.t) {
+      return '<p class="line blank" aria-hidden="true"></p>';
+    }
+    const key = `${col}-${i}`;
+    const isMasked = masked && !revealed.has(key);
+    const text = (line.r || [])
+      .map(([chunk, underlined]) =>
+        underlined ? `<span class="rep">${escapeHtml(chunk)}</span>` : escapeHtml(chunk)
+      )
+      .join("");
+    const attrs = isMasked
+      ? ' tabindex="0" role="button" aria-label="顯示這一句"'
+      : "";
+    const mark = line.m ? `<span class="mark">${escapeHtml(line.m)}</span>` : '<span class="mark"></span>';
+    return `<p class="line${isMasked ? " masked" : ""}" data-key="${key}" data-lv="${line.lv || 0}"${attrs}>${mark}<span class="txt">${text}</span></p>`;
   }
 
   function escapeHtml(text) {

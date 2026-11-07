@@ -555,7 +555,7 @@ button {
 
 .how {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
   margin-top: 4px;
 }
@@ -586,6 +586,12 @@ button {
   font-family: var(--serif);
   color: var(--accent);
   margin-right: 6px;
+}
+
+.how-card .sym {
+  font-style: normal;
+  color: var(--accent);
+  font-size: 0.9em;
 }
 
 /* 附錄 + 页脚 */
@@ -782,31 +788,80 @@ footer.site-foot {
 }
 
 .line {
-  position: relative;
+  display: grid;
+  grid-template-columns: 2.4em minmax(0, 1fr);
+  column-gap: 0.55em;
   margin: 0;
-  padding: 7px 12px 7px 10px;
+  padding: 6px 10px 6px 8px;
   border-radius: 10px;
   font-family: var(--serif);
   font-size: var(--text-size);
   line-height: 1.95;
   letter-spacing: 0.035em;
   color: var(--ink);
-  transition: background 0.16s ease, color 0.16s ease;
+  transition: background 0.16s ease;
   scroll-margin-top: 120px;
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
 
+.line .mark {
+  font-family: var(--sans);
+  font-size: 0.6em;
+  line-height: 3.25;
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+.line .txt {
+  min-width: 0;
+}
+
+.text-col[data-plain="true"] .line {
+  grid-template-columns: minmax(0, 1fr);
+  padding-left: 0;
+}
+
+.text-col[data-plain="true"] .line .mark {
+  display: none;
+}
+
+/* 手册用编号和项目符号标出同一组重复句，缩进即层级 */
+.line[data-lv="1"] {
+  margin-left: 1.5em;
+}
+
+.line[data-lv="2"] {
+  margin-left: 3em;
+}
+
 .line.blank {
-  height: 0.9em;
+  height: 0.8em;
   padding: 0;
+}
+
+.line.blank .mark {
+  display: none;
+}
+
+.line.blank .txt {
+  display: none;
 }
 
 .line[hidden] {
   display: none;
 }
 
-/* 长行自动收紧字距，避免在窄栏里折行难看 */
+/* 手册原文的下划线：标出重复出现的字词 */
+.rep {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 72%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.28em;
+}
+
 .text-article[data-density="tight"] .line {
   letter-spacing: 0;
   font-size: calc(var(--text-size) - 1px);
@@ -819,50 +874,46 @@ footer.site-foot {
 }
 
 .line.masked {
-  align-self: flex-start;
   cursor: pointer;
+}
+
+.line.masked .txt {
+  position: relative;
+  justify-self: start;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   color: transparent;
   background: var(--mask-fill);
   border-radius: 8px;
   user-select: none;
 }
 
-.line.masked::after {
+.line.masked .rep {
+  text-decoration-color: transparent;
+}
+
+.line.masked .txt::after {
   content: "· · · · · · · · · · · ·";
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
-  padding-left: 12px;
+  padding: 0 0.55em;
   color: var(--muted);
   letter-spacing: 0.3em;
-  font-size: calc(var(--text-size) * 0.7);
+  font-size: 0.7em;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .line.masked:focus-visible {
-  color: var(--ink);
+  outline: none;
 }
 
-.aside-rule {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 38px 0 4px;
-  font-family: var(--serif);
-  font-size: 14px;
-  letter-spacing: 0.42em;
-  color: var(--accent);
-}
-
-.aside-rule::before,
-.aside-rule::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--line);
+.line.masked:focus-visible .txt {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .page-note {
@@ -1116,6 +1167,7 @@ footer.site-foot {
   }
 
   .line {
+    grid-template-columns: 2.1em minmax(0, 1fr);
     padding: 8px 6px;
   }
 
@@ -1174,12 +1226,12 @@ footer.site-foot {
     line-height: 1.9;
   }
 
-  .line.masked {
+  .line.masked .txt {
     color: #000;
     background: none;
   }
 
-  .line.masked::after {
+  .line.masked .txt::after {
     display: none;
   }
 }
