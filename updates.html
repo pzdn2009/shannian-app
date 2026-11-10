@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="善念 App 版本更新记录：新功能、体验优化与问题修复。">
+  <title>善念版本更新记录</title>
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; color: #28231e; background: #f6f3ee; }
+    * { box-sizing: border-box; }
+    body { max-width: 820px; margin: 0 auto; padding: 48px 24px 72px; line-height: 1.75; }
+    header, article { padding: 28px; border-radius: 24px; background: #fff; box-shadow: 0 10px 35px #51433310; }
+    article { margin-top: 20px; }
+    h1 { margin: 0 0 8px; font-size: clamp(34px, 8vw, 48px); line-height: 1.2; }
+    h2 { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 14px; font-size: 24px; }
+    p, ul { margin: 8px 0; }
+    a { color: #c86108; }
+    .lead, .meta { color: #6c6258; }
+    .language-switch { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 18px; }
+    .language-switch a { padding: 6px 12px; border: 1px solid #eadfd4; border-radius: 999px; text-decoration: none; font-weight: 650; }
+    .language-switch .active { border-color: #c86108; color: #fff; background: #c86108; }
+    .status { flex: 0 0 auto; padding: 4px 10px; border-radius: 999px; color: #287a5d; background: #eaf5f0; font-size: 14px; }
+    .changes { padding-left: 22px; }
+    .changes li + li { margin-top: 10px; }
+    .credit { margin-top: 18px; padding: 12px 14px; border-left: 4px solid #c86108; border-radius: 8px; background: #fbf0e6; color: #6c6258; }
+    footer { margin-top: 30px; text-align: center; color: #6c6258; }
+    @media (max-width: 520px) {
+      body { padding: 28px 16px 48px; }
+      header, article { padding: 22px; }
+      h2 { align-items: flex-start; flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="language-switch" aria-label="语言切换">
+    <a class="active" href="updates.html" lang="zh-Hans" aria-current="page">中文</a>
+    <a href="updates-en.html" lang="en">English</a>
+  </nav>
+
+  <header>
+    <h1>版本更新记录</h1>
+    <p class="lead">记录善念的重要功能变化、体验优化与问题修复。安装包下载和历史版本仍保留在 GitHub Releases。</p>
+  </header>
+
+  <main>
+    <article>
+      <h2><span>善念 1.1.6</span><span class="status">即将发布</span></h2>
+      <p class="meta">2026 年 11 月 11 日</p>
+      <ul class="changes">
+        <li>英文计数界面移除数字旁不必要的单位文字，让计数更居中、专注。</li>
+        <li>经文章节时间改用“~15 min”等紧凑格式，减少小屏幕换行和溢出。</li>
+        <li>背诵与念诵底部操作改为铺满、低高度的纯图标按钮，并保留本地化无障碍说明。</li>
+        <li>完成 Android 端对应布局验证，保持 iPhone 与 Android 的操作体验一致。</li>
+        <li>新增“迁移累计数据”：在“更多 → 数据与偏好”中，可补录念佛的总数、今年和本月数据，也可补录经咒的累计整部遍数与当前轮进度；覆盖前会再次确认。</li>
+        <li>新增误操作撤销：念佛计数页可撤销最近一次 +1 或 +10；经咒念诵菜单可撤销今日最近一次念诵，且不会影响经文正文、书签或背诵进度。</li>
+        <li>Android 新增 APK 更新检查：每天最多后台检查一次，网络失败不会阻塞启动；也可在“关于善念”手动检查并打开最新版 APK 下载。</li>
+      </ul>
+      <p class="credit">本次体验优化由 LinFa 师兄提出，感谢反馈。</p>
+    </article>
+
+    <article>
+      <h2><span>善念 1.1.5</span><span class="status">已发布</span></h2>
+      <p class="meta">2026 年 11 月 10 日</p>
+      <ul class="changes">
+        <li>修复编辑本地经文时，键盘出现后正文消失或无法正常输入的问题。</li>
+      </ul>
+      <p class="credit">问题由 Jackson T 师兄反馈，感谢协助定位。</p>
+    </article>
+  </main>
+
+  <footer>
+    <a href="index.html">返回首页</a> ·
+    <a href="guide.html">使用教程</a> ·
+    <a href="https://github.com/pzdn2009/shannian-app/releases">安装包历史</a>
+  </footer>
+</body>
+</html>
