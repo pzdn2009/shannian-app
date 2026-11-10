@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="善念 App 使用教程：修持计划、念佛计数、经咒阅读背诵、禅观计时、备份恢复与问题反馈。">
+  <title>善念使用教程</title>
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; color: #28231e; background: #f6f3ee; }
+    * { box-sizing: border-box; }
+    body { max-width: 820px; margin: 0 auto; padding: 48px 24px 72px; line-height: 1.75; }
+    header, section { padding: 28px; border-radius: 24px; background: #fff; box-shadow: 0 10px 35px #51433310; }
+    section { margin-top: 20px; }
+    h1 { margin: 0 0 8px; font-size: clamp(34px, 8vw, 48px); line-height: 1.2; }
+    h2 { margin: 0 0 12px; font-size: 24px; }
+    h3 { margin: 20px 0 6px; font-size: 18px; }
+    p, ol, ul { margin: 8px 0; }
+    a { color: #c86108; }
+    .lead, .muted { color: #6c6258; }
+    .toc { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 22px; }
+    .toc a { padding: 11px 14px; border-radius: 12px; background: #fbf0e6; text-decoration: none; font-weight: 600; }
+    .step { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; margin-right: 8px; border-radius: 50%; background: #c86108; color: #fff; font-weight: 700; }
+    .tip { margin-top: 14px; padding: 14px 16px; border-left: 4px solid #c86108; border-radius: 8px; background: #fbf0e6; }
+    .practice-layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .practice-layer { padding: 18px; border-radius: 16px; background: #fbf8f4; }
+    .practice-layer strong { display: block; margin-bottom: 6px; color: #a94f08; font-size: 18px; }
+    .practice-layer p { margin: 0; color: #6c6258; font-size: 14px; }
+    .path { display: inline-block; margin: 4px 0 10px; padding: 5px 10px; border-radius: 999px; color: #74400f; background: #fbf0e6; font-size: 14px; font-weight: 650; }
+    .feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 16px 0; }
+    .feature-grid article { padding: 16px; border: 1px solid #eadfd4; border-radius: 16px; background: #fbf8f4; }
+    .feature-grid h3 { margin: 0 0 4px; }
+    .feature-grid p { margin: 0; color: #6c6258; font-size: 14px; }
+    .compact { padding-left: 22px; }
+    .compact li + li { margin-top: 5px; }
+    .screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+    .screens.one { grid-template-columns: minmax(0, 360px); }
+    .screens figure { margin: 0; padding: 12px; border: 1px solid #eadfd4; border-radius: 20px; background: #fbf8f4; }
+    .screens img { display: block; width: 100%; height: auto; border-radius: 14px; }
+    .screens figcaption { padding: 12px 4px 2px; color: #6c6258; font-size: 14px; }
+    .feedback-log { margin-top: 20px; overflow: hidden; border: 1px solid #eadfd4; border-radius: 14px; }
+    .feedback-log dl { display: grid; grid-template-columns: 120px 1fr; margin: 0; }
+    .feedback-log dt, .feedback-log dd { margin: 0; padding: 11px 14px; border-bottom: 1px solid #eadfd4; }
+    .feedback-log dt { color: #6c6258; background: #fbf8f4; font-weight: 600; }
+    .feedback-log dd { background: #fff; }
+    .feedback-log dt:last-of-type, .feedback-log dd:last-of-type { border-bottom: 0; }
+    .resolved { color: #287a5d; font-weight: 700; }
+    @media (max-width: 520px) {
+      header, section { padding: 22px; }
+      .practice-layers, .screens, .feature-grid { grid-template-columns: 1fr; }
+      .feedback-log dl { grid-template-columns: 1fr; }
+      .feedback-log dt { padding-bottom: 2px; border-bottom: 0; }
+      .feedback-log dd { padding-top: 2px; }
+    }
+    footer { margin-top: 30px; text-align: center; color: #6c6258; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>善念使用教程</h1>
+    <p class="lead">用一个清晰的日常节奏，安排念佛、经咒、禅观与回向。善念无需注册，修持数据默认保存在你的设备上。</p>
+    <nav class="toc" aria-label="教程目录">
+      <a href="#start">一门深入</a>
+      <a href="#today">今日修持</a>
+      <a href="#chant">念佛</a>
+      <a href="#scripture">经咒</a>
+      <a href="#meditation">禅观</a>
+      <a href="#records">回向与记录</a>
+      <a href="#nearby">附近服务</a>
+      <a href="#settings">设置与数据</a>
+      <a href="#feedback">反馈问题</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="start">
+      <h2><span class="step">1</span>一门深入，余行随缘</h2>
+      <p>善念不希望把修持变成越来越长的打卡清单。更稳定的方式，是以少量主修作为每日锚点，兼修按周期缓缓推进，空余时随力行持。</p>
+      <div class="practice-layers" aria-label="三层修持结构">
+        <div class="practice-layer">
+          <strong>主修</strong>
+          <p>选 1–2 项真正想长期安住的功课，每日稳定继续，不被其他项目挤掉。</p>
+        </div>
+        <div class="practice-layer">
+          <strong>兼修</strong>
+          <p>长经或阶段性功课不必每天强求同样的量，按本周期总量跟踪即可。</p>
+        </div>
+        <div class="practice-layer">
+          <strong>随力</strong>
+          <p>精力、时间具足时再做，不计入完成率，也不因今日没做而增加压力。</p>
+        </div>
+      </div>
+      <h3>也可以完全不设目标</h3>
+      <p>修持计划是用来整理节奏的可选工具，不是使用 App 的前提。不设置任何目标时，仍可直接从底部进入“念佛”、“经咒”或“禅观”，正常计数、阅读、念诵和计时。什么时候需要更稳定的周期，再回到“功课”页设置计划。</p>
+      <p class="tip">核心原则：目标服务于修持，不让修持反过来服务于目标。</p>
+      <div class="screens" aria-label="善念修持方式截图">
+        <figure>
+          <img src="screenshots/v1.1.3/01-home.png" alt="善念功课首页，尚未设置修持计划，底部仍可直接进入念佛、经咒和禅观">
+          <figcaption><strong>不设目标也能用：</strong>直接从底部栏进入各项修持，功课页保持安静留白。</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/v1.1.3/02-plan.png" alt="善念修持计划页，分为每日主修、兼修和随力三层安排">
+          <figcaption><strong>需要时再设计划：</strong>主修定方向，兼修看周期，随力留空间。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="today">
+      <h2><span class="step">2</span>今日修持</h2>
+      <span class="path">功课 → 右上角“修持计划”</span>
+      <ol class="compact">
+        <li>设置周期天数和开始日期。</li>
+        <li>选择 1–2 项主修，并设定每日数量。</li>
+        <li>可选 1 项兼修和多项随力，预览后启动。</li>
+      </ol>
+      <div class="feature-grid">
+        <article>
+          <h3>主修完成</h3>
+          <p>达到当日目标后从执行列表收起；全部完成时只保留一条绿色摘要。</p>
+        </article>
+        <article>
+          <h3>兼修节奏</h3>
+          <p>按周期累计进度判定“今日已跟上”，不制造每日欠账。</p>
+        </article>
+        <article>
+          <h3>随力候选</h3>
+          <p>首页每次最多显示 3 项，可刷新更换；当日达标后不再出现。</p>
+        </article>
+        <article>
+          <h3>自动估时</h3>
+          <p>点击“开始”便按本次目标计时；有历史记录后，会优先使用你的个人均时。</p>
+        </article>
+      </div>
+      <p class="tip">计时达标会播放完成提示音。修改或结束计划不会删除已有修持记录、经文进度和个人均时。</p>
+    </section>
+
+    <section id="chant">
+      <h2><span class="step">3</span>念佛</h2>
+      <span class="path">底部“念佛” → 选择佛号</span>
+      <ul class="compact">
+        <li>轻点主计数区 +1；完成一组十念后，切换“⑩”可一次记入 +10。</li>
+        <li>连续播放会自动计数；每百遍和计划完成提示音可在设置中控制。</li>
+        <li>佛号可新增、编辑或删除；内置“南无阿弥陀佛”不可删除，也不可重复添加。</li>
+      </ul>
+      <h3>十念记数</h3>
+      <p>此功能借鉴印光大师在《复高邵麟居士书四》中开示的<strong>十念记数法</strong>：一句佛号为一念，从一至十循环，重在念清、记清、听清。若直记十句较难，可分成 5+5 或 3+3+4。这与以一口气为一念的“晨朝十念”不同。</p>
+      <p class="tip">“⑩ +10”只记录已完成的一组十念，不代替实际念诵。</p>
+      <p class="muted">出处：《增广印光法师文钞·复高邵麟居士书四》。<a href="https://bookgb.bfnn.org/books2/1288.htm" target="_blank" rel="noopener">查看原文</a></p>
+      <div class="screens one">
+        <figure>
+          <img src="screenshots/v1.1.3/03-chanting.png" alt="善念念佛全屏计数器">
+          <figcaption>计数、十念与连续播放集中在同一个页面。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="scripture">
+      <h2><span class="step">4</span>经咒</h2>
+      <span class="path">底部“经咒” → 经典 → 章节</span>
+      <div class="feature-grid">
+        <article><h3>阅读</h3><p>静态阅读分段正文，不记书签，不因滚动改变进度。</p></article>
+        <article><h3>背诵</h3><p>逐句标记“记住一句”，可播放本句、回看正文并记录段落要点。</p></article>
+        <article><h3>念诵</h3><p>按品、卷、会或章节顺序完成；只有明确点击完成才会更新进度。</p></article>
+        <article><h3>拼音与发音</h3><p>菜单可显示逐字拼音；念诵模式可校准单字发音，全局规则在设置中管理。</p></article>
+      </div>
+      <h3>下载与编辑</h3>
+      <ul class="compact">
+        <li>右上角进入“在线经藏”，可搜索 Deerpark / CBETA，并选择按品会章或按原卷数下载。</li>
+        <li>下载后可离线使用；删除本地正文不会删除已有修持记录。</li>
+        <li>“编辑本地经文”按段修改。经文准确性重要，保存前请复核原文。</li>
+      </ul>
+      <div class="screens one">
+        <figure>
+          <img src="screenshots/v1.1.3/04-library.png" alt="善念经咒库和分类">
+          <figcaption>内置、已下载和本地经文统一放在经咒库中。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="meditation">
+      <h2><span class="step">5</span>禅观</h2>
+      <span class="path">底部“禅观” → 选择方法</span>
+      <ol class="compact">
+        <li>阅读方法说明，选择 5、10、20、30 分钟或自定义时长。</li>
+        <li>开始后进入全屏计时，可暂停、继续或提前结束并保存实际用时。</li>
+        <li>六妙门按“数、随、止、观、还、净”次第开启；达到阶段目标后，仍由你主动开启下一门。</li>
+        <li>可新增自定义方法；删除方法不会删除历史记录。</li>
+      </ol>
+      <p class="tip">建议允许通知，锁屏或 App 在后台时仍可在计时结束时提醒。</p>
+      <div class="screens one">
+        <figure>
+          <img src="screenshots/v1.1.3/05-meditation.png" alt="善念禅观方法与六妙门次第">
+          <figcaption>六妙门与其他禅观方法共用同一套计时和记录。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="records">
+      <h2><span class="step">6</span>回向与记录</h2>
+      <div class="feature-grid">
+        <article>
+          <h3>回向</h3>
+          <p>从功课首页进入。页面会汇总自上次回向后新增的念佛、经咒、禅观和持戒记录。</p>
+        </article>
+        <article>
+          <h3>修持记录</h3>
+          <p>从“更多 → 数据与偏好 → 修持记录”查看每日和累计数据。</p>
+        </article>
+        <article>
+          <h3>持戒</h3>
+          <p>首页的农历与十斋日卡片可进入当日持戒确认；持戒独立记录，不影响功课完成率。</p>
+        </article>
+        <article>
+          <h3>数据原则</h3>
+          <p>回向、改名、调整或结束计划都不会重写原始修持记录。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="nearby">
+      <h2><span class="step">7</span>附近服务与法讯</h2>
+      <span class="path">更多 → 附近素食 / 附近寺庙 / 法讯</span>
+      <ul class="compact">
+        <li>附近素食和寺庙支持关键字搜索、地图与列表、地点定位以及跳转系统地图导航。</li>
+        <li>只有在你主动搜索时才使用定位；拒绝权限后仍可手动输入地区或关键字。</li>
+        <li>法讯提供近期、月历与地图视图。参加前请再次核对寺院官方页面。</li>
+      </ul>
+      <div class="screens one">
+        <figure>
+          <img src="screenshots/v1.1.3/06-nearby.png" alt="善念附近素食和寺庙地图">
+          <figcaption>地图与底部结果面板联动，选中地点后可查看详情或导航。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="settings">
+      <h2><span class="step">8</span>设置与数据</h2>
+      <span class="path">更多 → 右上角设置</span>
+      <ul class="compact">
+        <li><strong>外观：</strong>跟随系统、浅色或深色，以及简体/繁体。</li>
+        <li><strong>阅读与播放：</strong>背诵入口、经文字号、播放语速、每遍停顿和念诵估速。</li>
+        <li><strong>念佛：</strong>“播放频率”控制连续语音；“计数频率”只用于没有个人样本时的手动念佛估时，两者互不代替。</li>
+        <li><strong>提醒：</strong>可开启温和修持提醒并设置时间。</li>
+      </ul>
+      <h3>备份与恢复</h3>
+      <span class="path">更多 → 数据与偏好 → 备份与恢复</span>
+      <ol class="compact">
+        <li>点击“导出备份”，把文件保存到云盘或其他安全位置。</li>
+        <li>在新设备上选择“从文档恢复”，检查预览后确认覆盖。</li>
+        <li>恢复完成后按提示完全重启 App。</li>
+      </ol>
+      <p class="tip">卸载 App 会删除本机数据。换机、卸载或更换安装渠道前，请先导出备份。</p>
+    </section>
+
+    <section id="feedback">
+      <h2><span class="step">9</span>反馈问题</h2>
+      <span class="path">更多 → 关于善念 → 反馈问题</span>
+      <p>可复制反馈模板、打开 WhatsApp，或发送邮件至 <a href="mailto:pzdn2009@gmail.com">pzdn2009@gmail.com</a>。</p>
+      <p class="muted">请附上设备型号、系统版本、App 版本和复现步骤，不要发送修持记录、位置或其他不必要的私密内容。</p>
+      <h3>反馈记录</h3>
+      <div class="feedback-log" aria-label="反馈记录">
+        <dl>
+          <dt>时间</dt>
+          <dd>2026 年 11 月 10 日早上</dd>
+          <dt>反馈人</dt>
+          <dd>Jackson T 师兄</dd>
+          <dt>问题</dt>
+          <dd>编辑时键盘无法正常输入。</dd>
+          <dt>处理状态</dt>
+          <dd><span class="resolved">已修复</span>，随善念 1.1.5 版本发布。</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="index.html">返回首页</a> ·
+    <a href="support.html">使用支持</a> ·
+    <a href="privacy.html">隐私政策</a>
+  </footer>
+</body>
+</html>
