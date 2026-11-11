@@ -1,0 +1,15 @@
+{
+  "region": "SG",
+  "policy": "official-sources-only",
+  "sources": [
+    {"id":"tai-pei-buddhist-centre","name":"大悲佛教中心","url":"https://dabei.org.sg/ceremonies/"},
+    {"id":"singapore-buddhist-lodge","name":"新加坡佛教居士林","url":"https://www.sbl.org.sg/chn/fahui.aspx"},
+    {"id":"golden-pagoda","name":"Golden Pagoda Buddhist Temple","url":"https://www.goldenpagoda.org.sg/"},
+    {"id":"dharma-drum","name":"法鼓山新加坡","url":"https://ddsingapore.org/event-type/%E6%B3%95%E4%BC%9A"},
+    {"id":"bw-monastery","name":"吉祥宝聚寺","url":"https://bwmonastery.org.sg/upcoming-event"},
+    {"id":"buddha-tooth-relic-temple","name":"佛牙寺龙华院","url":"https://www.buddhatoothrelictemple.org.sg/cn"},
+    {"id":"sagaramudra","name":"海印学佛会","url":"https://sagaramudra.org.sg/"},
+    {"id":"leong-hwa-monastery","name":"龙华藏院","url":"https://lhm.org.sg/"},
+    {"id":"kathok","name":"Nyingma Kathok Buddhist Centre","url":"https://kathok.org.sg/cn/calendar-2/"}
+  ]
+}

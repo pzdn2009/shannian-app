@@ -1,0 +1,32 @@
+name: Validate Dharma Events
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
+  push:
+    paths:
+      - "data/dharma-events/**"
+      - ".github/workflows/dharma-events.yml"
+  pull_request:
+    paths:
+      - "data/dharma-events/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate catalog
+        run: python data/dharma-events/v2/tools/validate_catalog.py
+      - name: Crawl official sources
+        run: python data/dharma-events/v2/tools/crawl_official_sources.py --output /tmp/dharma-event-candidates.json
+      - name: Upload candidate report
+        uses: actions/upload-artifact@v4
+        with:
+          name: dharma-event-candidates
+          path: /tmp/dharma-event-candidates.json
+          retention-days: 14
