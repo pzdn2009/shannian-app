@@ -58,10 +58,17 @@ def main() -> None:
                 fail(f"{session_label}: duplicate session id")
             session_ids.add(session["id"])
             start = parse_time(session["start"], f"{session_label}/start")
+            all_day = session.get("allDay", False)
+            if not isinstance(all_day, bool):
+                fail(f"{session_label}/allDay: boolean is required")
+            if all_day and (start.hour or start.minute or start.second or start.microsecond):
+                fail(f"{session_label}/start: all-day session must start at 00:00")
             if previous_start and start < previous_start:
                 fail(f"{session_label}: schedule must be chronological")
             previous_start = start
             end = parse_time(session["end"], f"{session_label}/end") if "end" in session else start
+            if all_day and "end" in session and (end.hour or end.minute or end.second or end.microsecond):
+                fail(f"{session_label}/end: all-day session end must be an exclusive date at 00:00")
             if end < start or ("end" in session and end == start):
                 fail(f"{session_label}: end must be later than start")
             latest_end = max(latest_end or end, end)

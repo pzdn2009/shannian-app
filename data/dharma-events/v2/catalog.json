@@ -1,20 +1,23 @@
 {
   "protocolVersion": 2,
-  "revision": "2026-11-11.2",
+  "revision": "2026-11-11.3",
   "region": "SG",
   "timeZone": "Asia/Singapore",
-  "updatedAt": "2026-11-11T08:30:00Z",
+  "updatedAt": "2026-11-11T09:03:56Z",
   "temples": [
     {"id":"sg.zhixing-society","name":"智行学会","address":"74B Lorong 8 Geylang, Singapore 399138","website":"https://www.facebook.com/profile.php?id=100064501249594","latitude":1.3100834,"longitude":103.8772626},
     {"id":"sg.singapore-buddhist-lodge","name":"新加坡佛教居士林","address":"17-19 Kim Yam Road, Singapore 239329","website":"https://www.sbl.org.sg/chn/fahui.aspx","latitude":1.2944089,"longitude":103.8391127},
     {"id":"sg.tai-pei-buddhist-centre","name":"大悲佛教中心","address":"2 Lavender Street, Singapore 338823","website":"https://dabei.org.sg/","phone":"6298 3343","latitude":1.3092351,"longitude":103.8645558},
     {"id":"sg.bw-monastery","name":"吉祥宝聚寺","address":"1 Woodlands Drive 16, Singapore 737764","website":"https://bwmonastery.org.sg/","phone":"6547 1580","latitude":1.4306254,"longitude":103.7988635},
     {"id":"sg.golden-pagoda","name":"Golden Pagoda Buddhist Temple","address":"83 Tampines Link, Singapore 528740","website":"https://www.goldenpagoda.org.sg/","latitude":1.3682539,"longitude":103.9301710},
-    {"id":"sg.dharma-drum","name":"法鼓山新加坡","address":"146B Paya Lebar Road, #06-01 Ace Building, Singapore 409017","website":"https://ddsingapore.org/","phone":"6735 5900","latitude":1.3278742,"longitude":103.8907961}
+    {"id":"sg.dharma-drum","name":"法鼓山新加坡","address":"146B Paya Lebar Road, #06-01 Ace Building, Singapore 409017","website":"https://ddsingapore.org/","phone":"6735 5900","latitude":1.3278742,"longitude":103.8907961},
+    {"id":"sg.buddha-tooth-relic-temple","name":"佛牙寺龙华院","address":"288 South Bridge Road, Singapore 058840","website":"https://www.buddhatoothrelictemple.org.sg/cn","phone":"6220 0220","latitude":1.2815093,"longitude":103.8441892},
+    {"id":"sg.sagaramudra","name":"海印学佛会","address":"5 Lorong 29 Geylang, Singapore 388060","website":"https://sagaramudra.org.sg/","phone":"6746 7582","latitude":1.31422099244307,"longitude":103.8854438620999},
+    {"id":"sg.leong-hwa-monastery","name":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","website":"https://lhm.org.sg/","phone":"6253 3532","latitude":1.318421961967974,"longitude":103.8482579904892}
   ],
   "events": [
     {"id":"sg.zhixing.2026.lianghuang-nov-dec","templeID":"sg.zhixing-society","title":"梁皇忏共修","temple":"智行学会","address":"74B Lorong 8 Geylang, Singapore 399138","summary":"每逢星期一 19:30 开始，临时调整以当天公告为准。","schedule":[{"id":"1116","title":"梁皇忏共修","start":"2026-11-16T19:30:00+08:00","end":"2026-11-16T21:30:00+08:00"},{"id":"1123","title":"梁皇忏共修","start":"2026-11-23T19:30:00+08:00","end":"2026-11-23T21:30:00+08:00"},{"id":"1130","title":"梁皇忏共修","start":"2026-11-30T19:30:00+08:00","end":"2026-11-30T21:30:00+08:00"},{"id":"1207","title":"梁皇忏共修","start":"2026-12-07T19:30:00+08:00","end":"2026-12-07T21:30:00+08:00"}],"sourceURL":"https://www.facebook.com/profile.php?id=100064501249594","verifiedAt":"2026-10-25T00:00:00Z","status":"published"},
-    {"id":"sg.sbl.2026.amitabha","templeID":"sg.singapore-buddhist-lodge","title":"无量寿法会","temple":"新加坡佛教居士林","address":"17-19 Kim Yam Road, Singapore 239329","summary":"农历十一月初一至十五；每日流程及报名以官网为准。","schedule":[{"id":"range","title":"无量寿法会","start":"2026-12-09T00:00:00+08:00","end":"2026-12-23T23:59:00+08:00"}],"signupURL":"https://futian.sbl.org.sg/","sourceURL":"https://www.sbl.org.sg/chn/fahui.aspx","verifiedAt":"2026-10-25T00:00:00Z","status":"published"},
+    {"id":"sg.sbl.2026.amitabha","templeID":"sg.singapore-buddhist-lodge","title":"无量寿法会","temple":"新加坡佛教居士林","address":"17-19 Kim Yam Road, Singapore 239329","summary":"农历十一月初一至十五；每日流程及报名以官网为准。","schedule":[{"id":"range","title":"无量寿法会","start":"2026-12-09T00:00:00+08:00","end":"2026-12-24T00:00:00+08:00","allDay":true}],"signupURL":"https://futian.sbl.org.sg/","sourceURL":"https://www.sbl.org.sg/chn/fahui.aspx","verifiedAt":"2026-11-11T09:03:56Z","status":"published"},
     {
       "id": "sg.tai-pei-buddhist-centre.2026.ten-thousand-buddhas",
       "templeID": "sg.tai-pei-buddhist-centre",
@@ -62,6 +65,15 @@
       "id":"sg.bw-monastery.2026.pure-land-repentance-nov29","templeID":"sg.bw-monastery","title":"净土忏与广大供养","temple":"吉祥宝聚寺","address":"1 Woodlands Drive 16, Singapore 737764","summary":"依《无量寿经》而立的净土忏法，并举行广大供养。","schedule":[{"id":"main","title":"净土忏与广大供养","start":"2026-11-29T10:00:00+08:00","end":"2026-11-29T12:00:00+08:00"}],"sourceURL":"https://bwmonastery.org.sg/calendar/2026/11/29pure-land-repentance","verifiedAt":"2026-11-11T08:30:00Z","status":"published"
     },
     {
+      "id":"sg.bw-monastery.2026.amitabha-birthday-dec","templeID":"sg.bw-monastery","title":"阿弥陀佛圣诞法会","temple":"吉祥宝聚寺","address":"1 Woodlands Drive 16, Singapore 737764","summary":"三日共修弥陀宝忏与净土忏，并举行广大供养、祈福和超荐。","schedule":[{"id":"upper","title":"弥陀宝忏上卷","start":"2026-12-18T19:45:00+08:00","end":"2026-12-18T21:00:00+08:00"},{"id":"lower","title":"弥陀宝忏下卷与广大供养","start":"2026-12-19T10:00:00+08:00","end":"2026-12-19T12:00:00+08:00"},{"id":"pure-land","title":"净土忏与广大供养","start":"2026-12-20T10:00:00+08:00","end":"2026-12-20T12:00:00+08:00"}],"sourceURL":"https://bwmonastery.org.sg/calendar","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.bw-monastery.2026.emperor-liang-scroll-10","templeID":"sg.bw-monastery","title":"梁皇宝忏卷十","temple":"吉祥宝聚寺","address":"1 Woodlands Drive 16, Singapore 737764","summary":"2026 年梁皇宝忏大法会卷十，并为大众祈福。","schedule":[{"id":"main","title":"梁皇宝忏卷十","start":"2026-12-27T10:00:00+08:00","end":"2026-12-27T12:00:00+08:00"}],"sourceURL":"https://bwmonastery.org.sg/calendar","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.bw-monastery.2027.thousand-buddhas-jan1","templeID":"sg.bw-monastery","title":"礼千佛法会·过去佛","temple":"吉祥宝聚寺","address":"1 Woodlands Drive 16, Singapore 737764","summary":"2027 年元旦礼千佛法会，并举行广大供养与祈福。","schedule":[{"id":"main","title":"礼千佛法会·过去佛","start":"2027-01-01T09:00:00+08:00","end":"2027-01-01T16:00:00+08:00"}],"sourceURL":"https://bwmonastery.org.sg/calendar","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
       "id":"sg.golden-pagoda.2026.ushnishavijaya-dec","templeID":"sg.golden-pagoda","title":"佛顶尊胜佛母荟供法会","temple":"Golden Pagoda Buddhist Temple","address":"83 Tampines Link, Singapore 528740","summary":"Uṣṇīṣavijayā Tsok Offering Ceremony，每日于大殿举行，实际流程以官方海报为准。","schedule":[{"id":"day-1","title":"佛顶尊胜佛母荟供法会","start":"2026-12-04T08:00:00+08:00"},{"id":"day-2","title":"佛顶尊胜佛母荟供法会","start":"2026-12-05T08:00:00+08:00"},{"id":"day-3","title":"佛顶尊胜佛母荟供法会","start":"2026-12-06T08:00:00+08:00"}],"sourceURL":"https://www.goldenpagoda.org.sg/","verifiedAt":"2026-11-11T08:30:00Z","status":"published"
     },
     {
@@ -72,6 +84,24 @@
     },
     {
       "id":"sg.dharma-drum.2026.great-compassion-repentance-dec","templeID":"sg.dharma-drum","title":"大悲忏法会","temple":"法鼓山新加坡","address":"146B Paya Lebar Road, #07-01 Ace Building, Singapore 409017","summary":"南无大悲观世音，愿我早得智慧眼。下午1:30报到，名额以官方报名为准。","schedule":[{"id":"main","title":"大悲忏法会","start":"2026-12-26T14:00:00+08:00","end":"2026-12-26T17:00:00+08:00"}],"signupURL":"https://www.ddsingapore.org/reg-fahui","sourceURL":"https://ddsingapore.org/event-type/%E6%B3%95%E4%BC%9A","verifiedAt":"2026-11-11T08:30:00Z","status":"published"
+    },
+    {
+      "id":"sg.sagaramudra.2026.avalokiteshvara-repentance-dec","templeID":"sg.sagaramudra","title":"大乘观音忏法","temple":"海印学佛会","address":"5 Lorong 29 Geylang, Singapore 388060","summary":"两日大乘观音忏法，每日 10:00 至 15:30。","schedule":[{"id":"day-1","title":"大乘观音忏法","start":"2026-12-17T10:00:00+08:00","end":"2026-12-17T15:30:00+08:00"},{"id":"day-2","title":"大乘观音忏法","start":"2026-12-18T10:00:00+08:00","end":"2026-12-18T15:30:00+08:00"}],"sourceURL":"https://sagaramudra.org.sg/","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.buddha-tooth-relic-temple.2026.emperor-liang-dec26","templeID":"sg.buddha-tooth-relic-temple","title":"礼拜梁皇宝忏","temple":"佛牙寺龙华院","address":"288 South Bridge Road, Singapore 058840","summary":"每周六梁皇宝忏共修；官方页面尚未公布当日具体时间。","schedule":[{"id":"main","title":"礼拜梁皇宝忏","start":"2026-12-26T00:00:00+08:00","allDay":true}],"sourceURL":"https://www.buddhatoothrelictemple.org.sg/cn","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.buddha-tooth-relic-temple.2027.maitreya-jan8","templeID":"sg.buddha-tooth-relic-temple","title":"弥勒法会","temple":"佛牙寺龙华院","address":"288 South Bridge Road, Singapore 058840","summary":"农历初一弥勒法会，僧团领众诵《佛说佛名经》、礼拜万佛名号并燃灯供养。","schedule":[{"id":"main","title":"弥勒法会","start":"2027-01-08T00:00:00+08:00","allDay":true}],"sourceURL":"https://www.buddhatoothrelictemple.org.sg/cn","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.leong-hwa-monastery.2026.winter-solstice-dec20","templeID":"sg.leong-hwa-monastery","title":"冬至延生普佛","temple":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","summary":"冬至日为在生者举行延生普佛；官方页面尚未公布具体时间。","schedule":[{"id":"main","title":"冬至延生普佛","start":"2026-12-20T00:00:00+08:00","allDay":true}],"sourceURL":"https://lhm.org.sg/","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.leong-hwa-monastery.2026.eight-precepts-dec25","templeID":"sg.leong-hwa-monastery","title":"八关斋戒","temple":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","summary":"阿弥陀佛圣诞法会期间的八关斋戒；官方页面尚未公布具体时间。","schedule":[{"id":"main","title":"八关斋戒","start":"2026-12-25T00:00:00+08:00","allDay":true}],"sourceURL":"https://lhm.org.sg/","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.leong-hwa-monastery.2026.amitabha-dec27","templeID":"sg.leong-hwa-monastery","title":"阿弥陀佛圣诞法会","temple":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","summary":"三时系念、阿弥陀忏悔与《无量寿经》共修；官方页面尚未公布具体时间。","schedule":[{"id":"main","title":"三时系念、弥陀忏与无量寿经","start":"2026-12-27T00:00:00+08:00","allDay":true}],"sourceURL":"https://lhm.org.sg/","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
     }
   ]
 }

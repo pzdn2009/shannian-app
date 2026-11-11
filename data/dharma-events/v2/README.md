@@ -6,6 +6,7 @@
 
 - 时间统一使用带 `+08:00` 的 ISO 8601，时区为 `Asia/Singapore`。
 - 一场法会可有多段 `schedule`；客户端按每段日程生成月历标记。
+- 官方只公布日期、未公布具体时间时，使用 `allDay: true`，不得猜测开始时间；`end` 按全天日历的惯例为不包含的结束日。
 - `published` 必须有官方 HTTPS `sourceURL` 和 `verifiedAt`。
 - 海报原图与缩略图一起放在 `media/<year>/`；列表只加载缩略图。
 - AI/OCR 提取结果只是草稿。日期、地点、报名二维码和官方来源须人工确认后才能设为 `published`。
