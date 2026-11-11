@@ -1,9 +1,9 @@
 {
   "protocolVersion": 2,
-  "revision": "2026-11-11.3",
+  "revision": "2026-11-11.4",
   "region": "SG",
   "timeZone": "Asia/Singapore",
-  "updatedAt": "2026-11-11T09:03:56Z",
+  "updatedAt": "2026-11-11T09:09:56Z",
   "temples": [
     {"id":"sg.zhixing-society","name":"智行学会","address":"74B Lorong 8 Geylang, Singapore 399138","website":"https://www.facebook.com/profile.php?id=100064501249594","latitude":1.3100834,"longitude":103.8772626},
     {"id":"sg.singapore-buddhist-lodge","name":"新加坡佛教居士林","address":"17-19 Kim Yam Road, Singapore 239329","website":"https://www.sbl.org.sg/chn/fahui.aspx","latitude":1.2944089,"longitude":103.8391127},
@@ -13,7 +13,9 @@
     {"id":"sg.dharma-drum","name":"法鼓山新加坡","address":"146B Paya Lebar Road, #06-01 Ace Building, Singapore 409017","website":"https://ddsingapore.org/","phone":"6735 5900","latitude":1.3278742,"longitude":103.8907961},
     {"id":"sg.buddha-tooth-relic-temple","name":"佛牙寺龙华院","address":"288 South Bridge Road, Singapore 058840","website":"https://www.buddhatoothrelictemple.org.sg/cn","phone":"6220 0220","latitude":1.2815093,"longitude":103.8441892},
     {"id":"sg.sagaramudra","name":"海印学佛会","address":"5 Lorong 29 Geylang, Singapore 388060","website":"https://sagaramudra.org.sg/","phone":"6746 7582","latitude":1.31422099244307,"longitude":103.8854438620999},
-    {"id":"sg.leong-hwa-monastery","name":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","website":"https://lhm.org.sg/","phone":"6253 3532","latitude":1.318421961967974,"longitude":103.8482579904892}
+    {"id":"sg.leong-hwa-monastery","name":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","website":"https://lhm.org.sg/","phone":"6253 3532","latitude":1.318421961967974,"longitude":103.8482579904892},
+    {"id":"sg.kmspks","name":"光明山普觉禅寺","address":"88 Bright Hill Road, Singapore 574117","website":"https://kmspks.org/","phone":"6849 5300","latitude":1.360519936447319,"longitude":103.836519069051},
+    {"id":"sg.poh-ern-shih","name":"报恩寺","address":"9 Chwee Chian Road, Singapore 117488","website":"https://www.pohernshih.sg/zh","phone":"6474 3926","latitude":1.278710816031474,"longitude":103.7883276495636}
   ],
   "events": [
     {"id":"sg.zhixing.2026.lianghuang-nov-dec","templeID":"sg.zhixing-society","title":"梁皇忏共修","temple":"智行学会","address":"74B Lorong 8 Geylang, Singapore 399138","summary":"每逢星期一 19:30 开始，临时调整以当天公告为准。","schedule":[{"id":"1116","title":"梁皇忏共修","start":"2026-11-16T19:30:00+08:00","end":"2026-11-16T21:30:00+08:00"},{"id":"1123","title":"梁皇忏共修","start":"2026-11-23T19:30:00+08:00","end":"2026-11-23T21:30:00+08:00"},{"id":"1130","title":"梁皇忏共修","start":"2026-11-30T19:30:00+08:00","end":"2026-11-30T21:30:00+08:00"},{"id":"1207","title":"梁皇忏共修","start":"2026-12-07T19:30:00+08:00","end":"2026-12-07T21:30:00+08:00"}],"sourceURL":"https://www.facebook.com/profile.php?id=100064501249594","verifiedAt":"2026-10-25T00:00:00Z","status":"published"},
@@ -102,6 +104,12 @@
     },
     {
       "id":"sg.leong-hwa-monastery.2026.amitabha-dec27","templeID":"sg.leong-hwa-monastery","title":"阿弥陀佛圣诞法会","temple":"龙华藏院","address":"67 Shrewsbury Road, Singapore 307834","summary":"三时系念、阿弥陀忏悔与《无量寿经》共修；官方页面尚未公布具体时间。","schedule":[{"id":"main","title":"三时系念、弥陀忏与无量寿经","start":"2026-12-27T00:00:00+08:00","allDay":true}],"sourceURL":"https://lhm.org.sg/","verifiedAt":"2026-11-11T09:03:56Z","status":"published"
+    },
+    {
+      "id":"sg.kmspks.2026.shui-lu-dec","templeID":"sg.kmspks","title":"水陆法会","temple":"光明山普觉禅寺","address":"88 Bright Hill Road, Singapore 574117","summary":"水陆法会（The Grand Prayer that Blesses and Benefits All Sentient Beings）；每日具体仪程以寺院官方公告为准。","schedule":[{"id":"range","title":"水陆法会","start":"2026-12-13T00:00:00+08:00","end":"2026-12-21T00:00:00+08:00","allDay":true}],"sourceURL":"https://kmspks.org/services/prayers/","verifiedAt":"2026-11-11T09:09:56Z","status":"published"
+    },
+    {
+      "id":"sg.poh-ern-shih.2026.ksitigarbha-repentance","templeID":"sg.poh-ern-shih","title":"地藏忏消灾法会","temple":"报恩寺","address":"9 Chwee Chian Road, Singapore 117488","summary":"每逢农历初九举行地藏忏消灾法会，可为个人或合家祈福消灾。","schedule":[{"id":"nov-18","title":"地藏忏消灾法会","start":"2026-11-18T10:00:00+08:00","end":"2026-11-18T13:00:00+08:00"},{"id":"dec-18","title":"地藏忏消灾法会","start":"2026-12-18T10:00:00+08:00","end":"2026-12-18T13:00:00+08:00"},{"id":"jan-16","title":"地藏忏消灾法会","start":"2027-01-16T10:00:00+08:00","end":"2027-01-16T13:00:00+08:00"}],"sourceURL":"https://www.pohernshih.sg/post/repentancepuja2026","verifiedAt":"2026-11-11T09:09:56Z","status":"published"
     }
   ]
 }
