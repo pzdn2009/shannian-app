@@ -25,6 +25,9 @@
       -webkit-font-smoothing: antialiased;
     }
     .wrap { max-width: 1120px; margin: 0 auto; }
+    .language-switch { display: flex; justify-content: flex-end; gap: 8px; padding-top: 30px; }
+    .language-switch a { padding: 6px 12px; border: 1px solid #eadfd4; border-radius: 999px; color: var(--muted); text-decoration: none; font-weight: 650; }
+    .language-switch .active { border-color: var(--accent); color: #fff; background: var(--accent); }
     header { padding: 56px 0 8px; }
     .back {
       display: inline-block;
@@ -118,6 +121,10 @@
 </head>
 <body>
   <div class="wrap">
+    <nav class="language-switch" aria-label="语言切换">
+      <a class="active" href="screenshots.html" lang="zh-Hans" aria-current="page">中文</a>
+      <a href="screenshots-en.html" lang="en">English</a>
+    </nav>
     <header>
       <a class="back" href="index.html">← 返回首页</a>
       <h1>界面预览</h1>
