@@ -1,0 +1,41 @@
+{
+  "protocolVersion": 1,
+  "revision": "2026-11-15.3",
+  "updatedAt": "2026-11-14T18:45:37Z",
+  "defaultLocale": "zh-Hans",
+  "contentBaseURL": "https://raw.githubusercontent.com/pzdn2009/shannian-app/main/data/contemplations/v1/items/",
+  "categories": [
+    {
+      "id": "huayan",
+      "title": "华严",
+      "order": 10
+    },
+    {
+      "id": "tiantai",
+      "title": "天台",
+      "order": 20
+    }
+  ],
+  "items": [
+    {
+      "id": "huayan.samanta-vows",
+      "categoryID": "huayan",
+      "title": "普贤十大愿王",
+      "file": "huayan.samanta-vows/item.json",
+      "contentVersion": 4,
+      "sha256": "adb82b901916ffb08237ce0cf3a381b9b6aba4af90773205fbbba0a0bdb679ac",
+      "status": "published",
+      "order": 10
+    },
+    {
+      "id": "tiantai.six-gates",
+      "categoryID": "tiantai",
+      "title": "六妙门",
+      "file": "tiantai.six-gates/item.json",
+      "contentVersion": 5,
+      "sha256": "9a06e13ed673ad83ca8910fdf9bd36af78f5103dfdbdc80148de1d15870c10be",
+      "status": "published",
+      "order": 20
+    }
+  ]
+}

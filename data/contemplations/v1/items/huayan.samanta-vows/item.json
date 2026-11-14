@@ -1,0 +1,85 @@
+{
+  "protocolVersion": 1,
+  "id": "huayan.samanta-vows",
+  "contentVersion": 4,
+  "categoryID": "huayan",
+  "title": "普贤十大愿王",
+  "source": {
+    "kind": "canonical-text",
+    "citation": "唐般若译《大方广佛华严经》卷四十，CBETA T10, no. 293",
+    "url": "https://cbetaonline.dila.edu.tw/zh/T10n0293_004",
+    "reviewedAt": "2026-11-15"
+  },
+  "units": [
+    {
+      "id": "1",
+      "title": "礼敬诸佛",
+      "file": "01-reverence.txt",
+      "sha256": "abd5bba02e33fa64bdee41edf995ff59f247ab25d1cee2c8baf8e4b2c8c59baa",
+      "citation": "CBETA T10, no. 293, p. 844c01–c11; p. 847a02–a05"
+    },
+    {
+      "id": "2",
+      "title": "称赞如来",
+      "file": "02-praise.txt",
+      "sha256": "947627c7851d9d08bc203d6db0cd867fdd65067a3a28e8430ceb1b3eede4d14e",
+      "citation": "CBETA T10, no. 293, p. 844c12–c23; p. 847a06–a09"
+    },
+    {
+      "id": "3",
+      "title": "广修供养",
+      "file": "03-offering.txt",
+      "sha256": "f541e8fe68b6fe9061e9a88fdc8ee61d688b5c9ccfaa636593d96174b3ea3f4d",
+      "citation": "CBETA T10, no. 293, p. 844c24–845a18; p. 847a10–a15"
+    },
+    {
+      "id": "4",
+      "title": "忏悔业障",
+      "file": "04-repentance.txt",
+      "sha256": "0d4cfe669ede6874ce107895d4a9dd5073ba6ee6afd8b870b32f847e5a511c28",
+      "citation": "CBETA T10, no. 293, p. 845a19–a28; p. 847a16–a17"
+    },
+    {
+      "id": "5",
+      "title": "随喜功德",
+      "file": "05-rejoicing.txt",
+      "sha256": "e6a5c7fa6333b22cb715b190a938974917ff6f93daf565db642bb1f60b8b3faf",
+      "citation": "CBETA T10, no. 293, p. 845a29–b15; p. 847a18–a19"
+    },
+    {
+      "id": "6",
+      "title": "请转法轮",
+      "file": "06-turning-the-wheel.txt",
+      "sha256": "ea2bd78117c7dfbcc03b8bd292b60748f2c282b63025c19316d34f5e0da971ac",
+      "citation": "CBETA T10, no. 293, p. 845b16–b25; p. 847a20–a21"
+    },
+    {
+      "id": "7",
+      "title": "请佛住世",
+      "file": "07-requesting-to-remain.txt",
+      "sha256": "fe6e20e801103ee391ca24dde2279ad3a4530e15ac0a576bf7c49aaca9087c52",
+      "citation": "CBETA T10, no. 293, p. 845b26–c04; p. 847a22–a23"
+    },
+    {
+      "id": "8",
+      "title": "常随佛学",
+      "file": "08-following-the-buddhas.txt",
+      "sha256": "02cfa8f9bf6e169aed6b3f97e84c0532396e6f0c72f1208cfb5688d3b3390e51",
+      "citation": "CBETA T10, no. 293, p. 845c05–c23; p. 847a26–a29"
+    },
+    {
+      "id": "9",
+      "title": "恒顺众生",
+      "file": "09-accommodating-beings.txt",
+      "sha256": "8a539fdfa3487bd134d576726cc743362a647770723ab76bcf194b455ca71740",
+      "citation": "CBETA T10, no. 293, p. 845c24–846a28; p. 847b15–b16"
+    },
+    {
+      "id": "10",
+      "title": "普皆回向",
+      "file": "10-dedication.txt",
+      "sha256": "7b0a7f0027f054b8c657619b894a4f8ccfc897f31644a2bb2f22d97958eba813",
+      "citation": "CBETA T10, no. 293, p. 846a29–b10; p. 847a24–a25"
+    }
+  ]
+}

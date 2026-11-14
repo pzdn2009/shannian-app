@@ -1,0 +1,51 @@
+{
+  "protocolVersion": 1,
+  "id": "tiantai.six-gates",
+  "contentVersion": 5,
+  "categoryID": "tiantai",
+  "title": "六妙门",
+  "source": {
+    "kind": "editorial-guide",
+    "citation": "智顗《六妙法门》，CBETA T46, no. 1917",
+    "url": "https://cbetaonline.dila.edu.tw/zh/T46n1917",
+    "reviewedAt": "2026-11-15"
+  },
+  "units": [
+    {
+      "id": "1",
+      "title": "数 · 数息",
+      "file": "01-counting.txt",
+      "sha256": "7edfef8417ff5ea5a617464f0502dcf4e88f7f50e0f1a57711903d6ed0f22eeb"
+    },
+    {
+      "id": "2",
+      "title": "随 · 随息",
+      "file": "02-following.txt",
+      "sha256": "53d7396daecea650deb6c2a72f15fa9140e068903dcae38a9703caec69687245"
+    },
+    {
+      "id": "3",
+      "title": "止 · 安住",
+      "file": "03-stopping.txt",
+      "sha256": "95186c835d0a224d3d16e40d425b4c5734f032745cce91510548ab658917fbec"
+    },
+    {
+      "id": "4",
+      "title": "观 · 观照",
+      "file": "04-contemplating.txt",
+      "sha256": "3d4c225d086b71b9620a739737a9fed05951016d9b5cdddaea20c614df4feb3a"
+    },
+    {
+      "id": "5",
+      "title": "还 · 返照",
+      "file": "05-returning.txt",
+      "sha256": "5c41f7c8d94f5441afba0872e5db86035a3c024679255c5ff1820d8e1b4984e0"
+    },
+    {
+      "id": "6",
+      "title": "净 · 无著",
+      "file": "06-purifying.txt",
+      "sha256": "06755fd55eb37393be75419245ea04253e18773f2985c8258b371a7ccd8f4907"
+    }
+  ]
+}
